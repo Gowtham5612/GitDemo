@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Title</title>
+    <script type="text/javascript">
+      function validate() {
+        var uname = document.getElementById("txtbox").nodeValue;
+        var regex = /E00/;
+        if (regex.test(uname)) {
+          alert("Valid");
+        } else {
+          alert("Invalid");
+          document.getElementById("lbluser").style.visibility = "visible";
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input id="txtBox" placeholder="Enter your Name" type="text" /><br />
+      <br />
+      <label id="lbluser" style="color: red; visibility: hidden"></label>
+      <button id="btn" onclick="validate()" type="button">Click</button>
+    </form>
+  </body>
+</html>
